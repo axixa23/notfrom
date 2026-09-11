@@ -1,1 +1,64 @@
-helloworld
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>イノリノウタ</title>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html, body {
+    height: 100%;
+    background: #000;
+  }
+
+  body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    min-height: 100dvh;
+    padding: 2rem 1.5rem;
+    font-family: "Hiragino Mincho ProN", "Yu Mincho", "YuMincho", "MS PMincho", serif;
+    color: #e8e4dc;
+  }
+
+  .verse {
+    text-align: center;
+    line-height: 2.4;
+    letter-spacing: 0.4em;
+    text-indent: 0.4em;
+    animation: emerge 4s ease-out both;
+  }
+
+  .verse p {
+    font-size: clamp(1.15rem, 5.5vw, 2rem);
+    text-shadow: 0 0 24px rgba(232, 228, 220, 0.25);
+    white-space: nowrap;
+  }
+
+  .verse p + p {
+    margin-top: 1.2em;
+  }
+
+  @keyframes emerge {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .verse { animation: none; }
+  }
+</style>
+</head>
+<body>
+  <main class="verse">
+    <p>イノリノウタ　ハ</p>
+    <p>チリベルタルヌアダリウス</p>
+  </main>
+</body>
+</html>
